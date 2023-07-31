@@ -1,0 +1,42 @@
+form {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+  background-color: rgb(21, 13, 43);
+  margin-bottom: 3vh;
+  color: white;
+}
+
+#container-posts {
+  padding-left: 5vh;
+  padding-right: 5vh;
+}
+
+.post-div {
+  cursor: pointer;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+#botao {
+  display: flex;
+  gap: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+  background-color: rgb(21, 13, 43);
+  width: 100%;
+  bottom: 0; 
+}
+
+@media screen and (min-width: 1100px) {
+  #botao {
+    position: fixed;
+    bottom: 0;
+  }
+}

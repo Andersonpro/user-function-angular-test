@@ -1,0 +1,23 @@
+<form action="">
+  <label for="pesquisar">Digite o título: </label>
+  <input type="text" id="pesquisar" [(ngModel)]="valorInput" name="pesquisar">
+  <button type="submit" (click)="searchPost()" [disabled]="disableSearchButton">Pesquisar</button>
+</form>
+
+<div id="container-posts">
+  <div (click)="clickPost($event)" *ngFor="let post of posts5" id="{{post.id}}" class="post-div">
+    <h4>{{post.title}}</h4>
+    <p>{{post.body}}</p>
+    <hr>
+  </div>
+  <div>
+    <h4>{{elementoClicado.title || elementoPesquisado.title}}</h4>
+    <p>{{elementoClicado.body || elementoPesquisado.body}}</p>
+  </div>
+</div>
+
+<div id="botao">
+  <button (click)="paginationPrevious()" [disabled]="previousButtonDisabled">Previous</button>
+  <button (click)="paginationNext()" [disabled]="nextButtonDisabled">Next</button>
+  <button (click)="returnClick()" [disabled]="disableReturnButton">Return</button>
+</div>
